@@ -2,20 +2,86 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.passwordmanager">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/appicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".login.ChangeMPwdActivity" />
+        <activity
+            android:name=".HealthActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".OtherActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ArtActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".TravelActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".HomeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".FoodActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".PlayActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MoneyActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MessageActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".WorkActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SocialActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".StudyActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".SettingsActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".EditDataActivity" />
+        <activity android:name=".AddPwdActivity"
+             />
+        <activity
+            android:name=".ShoppingActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:launchMode="singleTask" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".login.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

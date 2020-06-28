@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.passwordmanager.RecyclerItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@android:color/transparent"
+    android:layout_marginBottom="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/slide"
+                android:layout_toRightOf="@+id/layout_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/edit"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/cardMarginVertical"
+                    android:layout_marginLeft="@dimen/cardMarginHorizontal"
+
+                    android:layout_marginTop="@dimen/cardMarginVertical"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardPreventCornerOverlap="false"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:contentPadding="0dp"
+                    app:cardBackgroundColor="#22000000">
+
+                    <TextView
+                        android:id="@+id/other"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="编 辑"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/delete"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/cardMarginVertical"
+                    android:layout_marginLeft="@dimen/cardMarginHorizontal"
+                    android:layout_marginRight="@dimen/cardMarginHorizontal"
+                    android:layout_marginTop="@dimen/cardMarginVertical"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardPreventCornerOverlap="false"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:contentPadding="0dp"
+                    app:cardBackgroundColor="#FF0000">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="删 除"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_left"
+                android:layout_width="291dp"
+                android:layout_height="match_parent"
+                android:background="#99404348"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/cardMarginVertical"
+                    android:layout_marginLeft="@dimen/cardMarginHorizontal"
+                    android:layout_marginRight="@dimen/cardMarginHorizontal"
+                    android:layout_marginTop="@dimen/cardMarginVertical"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:cardPreventCornerOverlap="false"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    app:contentPadding="0dp"
+                    app:cardBackgroundColor="#FFEBED">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/card_bg" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/acc_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/account_name" />
+
+                        <TextView
+                            android:id="@+id/account_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_toEndOf="@+id/acc_name"
+                            android:layout_toRightOf="@+id/acc_name" />
+
+                        <TextView
+                            android:id="@+id/acc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/acc_name"
+                            android:textColor="@color/black"
+                            android:text="@string/user_name" />
+
+                        <TextView
+                            android:id="@+id/account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_below="@+id/account_name"
+                            android:layout_toRightOf="@+id/acc"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:id="@+id/pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/acc"
+                            android:textColor="@color/black"
+                            android:text="@string/password" />
+
+                        <com.android.passwordmanager.secrettextview.SecretTextView
+                            android:id="@+id/password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/account"
+                            android:textColor="@color/black"
+                            android:layout_toRightOf="@+id/pass"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:id="@+id/tim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="添加时间："
+                            android:textColor="@color/black"
+                            android:layout_below="@+id/pass" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pass"
+                            android:textColor="@color/black"
+                            android:layout_toRightOf="@+id/tim"/>
+
+                        <TextView
+                            android:id="@+id/des"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tim"
+                            android:text="@string/describe"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/describe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tim"
+                            android:textColor="@color/black"
+                            android:layout_toRightOf="@+id/des"
+                            android:maxLines="3"/>
+
+                        <TextView
+                            android:id="@+id/des_key"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/describe"
+                            android:layout_marginRight="10dp"
+                            android:padding="5dp"
+                            android:text="展开"
+                            android:textColor="#aa8863"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</com.android.passwordmanager.RecyclerItemView>

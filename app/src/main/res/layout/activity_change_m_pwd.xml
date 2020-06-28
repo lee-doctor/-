@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sha"
+    android:orientation="vertical">
+
+    <com.yalantis.jellytoolbar.widget.JellyToolbar
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6ED8D8"
+        app:title="修改主密码"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="登录密码修改"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="70dp"
+                android:hint="原密码"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                app:met_textColorHint="#7A7979"
+                app:met_iconLeft="@drawable/ic_password"
+                app:met_iconPadding="0dp"
+                app:met_textColor="@color/text_color"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="原密码"
+                app:met_singleLineEllipsis="true"
+                android:inputType="textVisiblePassword"
+                app:met_underlineColor="@color/white"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/new_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/password"
+                android:layout_marginRight="70dp"
+                android:hint="新密码"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                app:met_textColorHint="#7A7979"
+                app:met_iconLeft="@drawable/ic_password"
+                app:met_iconPadding="0dp"
+                app:met_textColor="@color/text_color"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="新密码"
+                app:met_singleLineEllipsis="true"
+                android:inputType="textVisiblePassword"
+                app:met_underlineColor="@color/white"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="确认密码"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:layout_below="@+id/new_pwd"
+                android:layout_marginRight="70dp"
+                app:met_iconLeft="@drawable/ic_sure"
+                app:met_textColorHint="#7A7979"
+                app:met_textColor="@color/text_color"
+                app:met_iconPadding="0dp"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="确认密码"
+                app:met_singleLineEllipsis="true"
+                android:inputType="textVisiblePassword"
+                app:met_underlineColor="@color/white" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sure"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_submit"
+                android:text="提交"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

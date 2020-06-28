@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFEDED"
+    tools:context=".SettingsActivity">
+
+    <include layout="@layout/toolbar_settings" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/main_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/edittext"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:text="修改登录密码"
+            android:gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/change_btn"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/ic_right"
+            android:layout_alignRight="@+id/main_pwd"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/dp_10"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <TextView
+            android:id="@+id/pwd_appear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/edittext"
+            android:layout_below="@+id/main_pwd"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_centerHorizontal="true"
+            android:text="密码显示时间"
+            android:gravity="center_vertical" />
+
+        <SeekBar
+            android:id="@+id/appear_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_pwd"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="50dp"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:max="60"
+            android:progressDrawable="@drawable/seekbar_bg" />
+
+        <TextView
+            android:id="@+id/seek_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_pwd"
+            android:layout_alignRight="@+id/change_btn"
+            android:layout_marginTop="20dp"
+            android:text="0s"
+            android:textSize="15sp"
+            android:textColor="@color/text_color" />
+        <TextView
+            android:id="@+id/pwd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pwd_appear"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="密码生成器"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/pwd_size"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/edittext"
+            android:layout_below="@+id/pwd_title"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="密码长度"
+            android:gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pwd_title"
+            android:layout_alignRight="@+id/seek_time"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_add"
+                android:layout_marginRight="15dp"
+                style="?android:attr/borderlessButtonStyle" />
+
+
+            <TextView
+                android:id="@+id/pwdSize"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="8"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_marginRight="15dp" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_minus"
+                style="?android:attr/borderlessButtonStyle" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/pwd_size"
+            android:background="@color/white_pressed"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/isWord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/edittext"
+            android:layout_below="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:text="大小写"
+            android:gravity="center_vertical" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:layout_marginTop="26dp"
+            android:layout_alignLeft="@+id/linear"
+            android:layout_marginLeft="35dp"
+            android:switchMinWidth="50dp" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/isWord"
+            android:background="@color/white_pressed"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/isNum"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/edittext"
+            android:layout_below="@+id/line1"
+            android:layout_centerHorizontal="true"
+            android:text="包含数字"
+            android:gravity="center_vertical" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch1"
+            android:layout_marginTop="26dp"
+            android:layout_alignLeft="@+id/linear"
+            android:layout_marginLeft="35dp"
+            android:switchMinWidth="50dp" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/isNum"
+            android:background="@color/white_pressed"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/isSymbol"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/edittext"
+            android:layout_below="@+id/line2"
+            android:layout_centerHorizontal="true"
+            android:text="包含字符"
+            android:gravity="center_vertical" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch2"
+            android:layout_marginTop="26dp"
+            android:layout_alignLeft="@+id/linear"
+            android:layout_marginLeft="35dp"
+            android:switchMinWidth="50dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

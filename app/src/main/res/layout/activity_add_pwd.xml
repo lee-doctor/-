@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sha"
+    android:orientation="vertical">
+
+    <com.yalantis.jellytoolbar.widget.JellyToolbar
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6ED8D8"
+        app:title="添加"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="账号名称不能为空，请不要输入已添加的账号名称"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:fadeScrollbars="true"
+        android:fillViewport="true"
+        android:descendantFocusability="blocksDescendants">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="账号名称"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginRight="70dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:enabled="true"
+                app:met_iconLeft="@drawable/ic_account_name"
+                app:met_textColorHint="#7A7979"
+                app:met_floatingLabelTextColor="@color/white"
+                app:met_textColor="@color/text_color"
+                app:met_iconPadding="0dp"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/account_name"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="@color/white" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/account_name"
+                android:hint="账号"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:layout_marginRight="70dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:enabled="true"
+                app:met_iconLeft="@drawable/ic_account"
+                app:met_textColorHint="#7A7979"
+                app:met_textColor="@color/text_color"
+                app:met_iconPadding="0dp"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/user_name"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="@color/white" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/user"
+                android:layout_marginRight="70dp"
+                android:hint="密码"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:inputType="textVisiblePassword"
+                android:clickable="true"
+                android:focusable="true"
+                android:enabled="true"
+                app:met_textColorHint="#7A7979"
+                app:met_iconLeft="@drawable/ic_password"
+                app:met_iconPadding="0dp"
+                app:met_textColor="@color/text_color"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/password"
+                app:met_singleLineEllipsis="true"
+                app:met_underlineColor="@color/white"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/describe"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/password"
+                android:layout_marginRight="70dp"
+                android:hint="备注"
+                android:maxLines="2"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:enabled="true"
+                app:met_textColorHint="#7A7979"
+                app:met_iconLeft="@drawable/ic_describe"
+                app:met_textColor="@color/text_color"
+                app:met_iconPadding="0dp"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/describe"
+                app:met_underlineColor="@color/white" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/describe"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_submit"
+                android:text="提交"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

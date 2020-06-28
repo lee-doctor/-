@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">PasswordManager</string>
+    <string name="app_name">我的密码本</string>
+
+    <string name="account_name">账号名称：</string>
+    <string name="user_name">用户名：</string>
+    <string name="password">密码：</string>
+    <string name="describe">备注：</string>
 </resources>

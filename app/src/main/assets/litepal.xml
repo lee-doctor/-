@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="Passwords" />
+
+    <version value="7" />
+
+    <list>
+        <mapping class="com.android.passwordmanager.login.User" />
+        <mapping class="com.android.passwordmanager.table.Study" />
+        <mapping class="com.android.passwordmanager.table.Social" />
+        <mapping class="com.android.passwordmanager.table.Work" />
+        <mapping class="com.android.passwordmanager.table.Message" />
+        <mapping class="com.android.passwordmanager.table.Money" />
+        <mapping class="com.android.passwordmanager.table.Play" />
+        <mapping class="com.android.passwordmanager.table.Shopping" />
+        <mapping class="com.android.passwordmanager.table.Food" />
+        <mapping class="com.android.passwordmanager.table.Home" />
+        <mapping class="com.android.passwordmanager.table.Travel" />
+        <mapping class="com.android.passwordmanager.table.Health" />
+        <mapping class="com.android.passwordmanager.table.Art" />
+        <mapping class="com.android.passwordmanager.table.Other" />
+    </list>
+</litepal>
